@@ -1,0 +1,750 @@
+//
+//  parsingManager.swift
+//  ZZBitRate
+//
+//  Created by aviza on 12/12/2017.
+//  Copyright © 2017 aviza. All rights reserved.
+//
+
+import Foundation
+import RealmSwift
+
+class parsingManager {
+    static let shared = parsingManager()
+    
+    func parseTopListRequest(data : Data) -> Array<ZZCoinRate> {
+        
+        var arr : Array<ZZCoinRate> = []
+        var totalMarketCup : Float64 = 0.0
+        var totalVol : Float64 = 0.0
+        
+        
+        if let json = try? JSONSerialization.jsonObject(with: data, options: []) as! [String: Any] {
+            print(json)
+            
+            if let jsonArr = json["Data"] as? [Any] {
+                
+                //let baseImageUrl = json!["BaseImageUrl"] as? String
+                
+                for dict in jsonArr {
+                    if let coinDict = dict as? [String: Any] {
+                        if let coin = ZZCoinRate(json: coinDict) {
+                            arr.append(coin)
+                            
+                            let capString = coin.market_cap_usd
+                            let cap = (capString as NSString).doubleValue
+                            totalMarketCup += cap
+                            
+                            let volString = coin.one_day_volume_usd
+                            let vol = (volString as NSString).doubleValue
+                            totalVol += vol
+                        }
+                    }
+                    
+                }
+                
+                // print("totalMarketCup : \(totalMarketCup)")
+                
+                UserDataManager.shared.totalMarketCap = totalMarketCup
+                UserDataManager.shared.totalVol = totalVol
+                
+            }
+            
+        }
+        
+        return arr
+    }
+    
+    func parseCoinsByNameListRequest(data : Data) -> Array<ZZCoinRate> {
+         
+         var arr : Array<ZZCoinRate> = []
+         
+         if let json = try? JSONSerialization.jsonObject(with: data, options: []) as! [String: Any] {
+             print(json)
+            
+            if let rawJson = json["RAW"] as? [String: Any] {
+                print(rawJson)
+
+                //looping the UserDefaults fav_array
+                let favArray = UserDefaults.standard.object(forKey: "fav_array") as? [String] ?? [String]()
+
+
+                 for coinId in favArray {
+
+                    let RAW_SYMBOL_JSON : [String:Any] = rawJson[coinId] as? [String: Any] ?? [:]
+                    let RAW_USD_JSON : [String:Any] = RAW_SYMBOL_JSON["USD"] as? [String: Any] ?? [:]
+
+                    if let coin = ZZCoinRate(RAW_USD_JSON:RAW_USD_JSON ) {
+                             arr.append(coin)
+                         }
+                 }
+                
+            }
+        }
+        
+         
+         return arr
+     }
+    
+    func parseAllCoins(data : Data) -> Array<ZZCoin> {
+        
+        var coins: [ZZCoin] = []
+        
+        if let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []) as! [String: Any] {
+            
+            let coinsDictionary = jsonObject["Data"] as! [String: [String: Any]]
+            
+            for (_, coin) in coinsDictionary {
+                
+                if let id = coin["Id"] as? String,
+                    let imageUrl = coin["ImageUrl"] as? String,
+                    let symbol = coin["Symbol"] as? String,
+                    let fullName = coin["FullName"] as? String {
+                    
+                    let zzcoin = ZZCoin(id: id, imageUrl: imageUrl, symbol: symbol, fullName: fullName)
+                    coins.append(zzcoin)
+                }
+                
+                
+            }
+            
+        }
+        
+        return coins
+        
+    }
+    
+    
+    func parseFavoritesCoinsRequest(data : Data) -> Array<ZZCoinRate> {
+        
+        var arr : Array<ZZCoinRate> = []
+        
+        let defaults = UserDefaults.standard
+        let favArray = defaults.object(forKey: "fav_array") as? [String] ?? [String]()
+        
+        if let json = try? JSONSerialization.jsonObject(with: data, options: []) as! [String: Any] {
+            //print(json)
+            
+            let jsonArr = json["Data"] as! [Any]
+            
+            
+            //let dict = json!["Data"] as? [String: Any]
+            //let baseImageUrl = json!["BaseImageUrl"] as? String
+            
+            for dict in jsonArr {
+                if let coinDict = dict as? [String: Any] {
+                    if let coin = ZZCoinRate(json: coinDict) {
+                        
+                        if favArray.contains(coin.nameID) {
+                            arr.append(coin)
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        
+        return arr
+    }
+    
+    func parseAllCoinsImagesFromCryptoCompareRequest(data : Data) -> [String:String] {
+        
+        var imagesDict : [String:String] = [:]
+        
+        do {
+            let json = try  JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            // print(json)
+            
+            let coinsDict = json!["Data"] as? [String: Any]
+            let baseImageUrl = json!["BaseImageUrl"] as? String
+            
+            if let coinsDict = coinsDict {
+                
+                for (key, value) in coinsDict {
+                    //imagesDict[key] = baseImageUrl
+                    let coinDict = value as? [String: Any]
+                    if let coinDict = coinDict {
+                        
+                        let imageUrl = coinDict["ImageUrl"] as? String
+                        let name     = coinDict["Name"] as? String
+                        
+                        if let imageUrl = imageUrl,
+                            let name = name ,
+                            let baseImageUrl = baseImageUrl  {
+                            imagesDict[name] = baseImageUrl + imageUrl
+                            
+                            //print the images json as a dict
+                            //                            let q = "\""
+                            //                            print(q +
+                            //                                "\(name)" +
+                            //                                q +
+                            //                                ":" +
+                            //                                q +
+                            //                                "\(baseImageUrl + imageUrl)" +
+                            //                                q +
+                            //                                ",")
+                        }
+                        
+                    }
+                }
+                
+                
+                
+            }
+            
+            
+        } catch {
+            print(error)
+        }
+        
+        
+        
+        return imagesDict
+    }
+    
+    
+    func parseAllNewsRequest(data : Data) -> Array<NewsItem> {
+        
+        var arr : Array<NewsItem> = []
+        
+        do {
+            let json = try  JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            
+            //   print(json)
+            
+            if let dict = json!["articles"] as? [Any] {
+                for item in dict {
+                    if let newItemDict = item as? [String: Any] {
+                        if let newsItem = NewsItem(json: newItemDict) {
+                            arr.append(newsItem)
+                        }
+                    }
+                }
+            }
+            
+        } catch {
+            print(error)
+        }
+        
+        return arr
+    }
+    
+    func parseCryptoPanicNews(data : Data) -> Array<CryptoPanicNewsItem> {
+        
+        var arr : Array<CryptoPanicNewsItem> = []
+        
+        do {
+            let json = try  JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            
+            //  print(json)
+            
+            if let dict = json!["results"] as? [Any] {
+                for item in dict {
+                    if let newItemDict = item as? [String: Any] {
+                        if let newsItem = CryptoPanicNewsItem(json: newItemDict) {
+                            arr.append(newsItem)
+                        }
+                    }
+                }
+            }
+            
+        } catch {
+            print(error)
+        }
+        
+        return arr
+    }
+    
+    
+    func parseHistoryRequest(data : Data) -> CoinHistory {
+        
+        var arr : Array<HistoryItem> = []
+        var from = 0.0
+        var to = 0.0
+        
+        
+        do {
+            let JSON = try  JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            
+            //  print(JSON)
+            
+            if let json = JSON {
+                
+                if let timeFrom = json["TimeFrom"] as? Double {
+                    from = timeFrom
+                }
+                
+                if let timeTo = json["TimeTo"] as? Double {
+                    to = timeTo
+                }
+                
+                if let dict = json["Data"] as? [Any] {
+                    for item in dict {
+                        if let newItemDict = item as? [String: Any] {
+                            if let historyItem = HistoryItem(json: newItemDict) {
+                                arr.append(historyItem)
+                            }
+                        }
+                    }
+                }
+            }
+            
+        } catch {
+            print(error)
+        }
+        
+        let coinHistory = CoinHistory(timeTo : to, timeFrom : from, arr : arr)
+        return  coinHistory!
+        
+    }
+    
+    func parseExchagesRequest(data : Data,tsym: String) -> [String] {
+        var arr : [String] = []
+        
+        do {
+            let JSON = try  JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            
+            // print(JSON)
+            
+            if let json = JSON {
+                
+                if let dict = json[tsym] as? [String:Any] {
+                    if  let subs = dict["TRADES"] as? [String] {
+                        arr = subs
+                    }
+                }
+            }
+            
+        } catch {
+            print(error)
+        }
+        
+        
+        return  arr
+    }
+    
+    func parsePriceRequest(data : Data) -> Double {
+        do {
+            let JSON = try  JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            
+            if let json = JSON {
+                
+                if let price = json["USD"] as? Double {
+                    return price
+                }
+            }
+            
+        } catch {
+            print(error)
+        }
+        
+        return 0.0
+    }
+    
+    func parsePricesRequest(data : Data) -> [String: Double]? {
+        do {
+            let JSON = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            
+            if let json = JSON {
+                var prices: [String: Double] = [:]
+                for (key, value) in json {
+                    if let rates = value as? [String: Double] {
+                        prices[key] = rates["USD"]
+                    }
+                }
+                
+                return prices
+                
+            }
+            
+            return nil
+            
+        } catch {
+            print(error)
+            return nil
+        }
+        
+    }
+    
+    func getExchangeNameFromSub(str : String) -> String {
+        
+        let myStringArr = str.components(separatedBy: "~")
+        if myStringArr.count > 2 {
+            return myStringArr[1]
+        }
+        else {
+            return ""
+        }
+    }
+    
+    func parseUser(data: Data) {
+        
+        do {
+            if let userJSON = try  JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                
+                if let id = userJSON["_id"] as? String {
+                    
+                    let user = User()
+                    
+                    let realm = try! Realm()
+                    try! realm.write() {
+                        
+                        user.userId = id
+                        realm.add(user)
+                        print("user created")
+                    }
+                }
+                
+            }
+            
+        }
+            
+        catch let error as NSError {
+            print("failed parsing JSON: \(error.localizedDescription)")
+        }
+        
+        
+    }
+    
+    func parseNotifications(data: Data) {
+        
+        do {
+            if let notificationsJSON = try  JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                
+                
+                if let notifications = notificationsJSON["notifications"] as? [[String: Any]] {
+                    
+                    let realm = try! Realm()
+                    
+                    try! realm.write() {
+                        
+                        // Delete all limit and interval notifications
+                        let intervalNotificationResults = realm.objects(IntervalNotification.self)
+                        let limitNotificationResults = realm.objects(LimitNotification.self)
+                        realm.delete(intervalNotificationResults)
+                        realm.delete(limitNotificationResults)
+                        
+                        for notification in notifications {
+                            
+                            let notificationType = notification["__t"] as! String
+                            
+                            if (notificationType == "LimitNotification") {
+                                realm.create(LimitNotification.self, value: notification, update: .modified)
+                            }
+                            else if (notificationType == "IntervalNotification") {
+                                realm.create(IntervalNotification.self, value: notification, update: .modified)
+                                
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                    
+                    let LimitNotifications = realm.objects(LimitNotification.self)
+                    let IntervalNotifications = realm.objects(IntervalNotification.self)
+                    
+                    print("LimitNotifications: \(LimitNotifications)")
+                    print("IntervalNotifications: \(IntervalNotifications)")
+                    
+                }
+                    
+                else {
+                    throw NSError(domain: "Api getNotifications", code: 0, userInfo: notificationsJSON)
+                }
+                
+                
+                
+                
+            }
+            
+        }
+            
+        catch let error as NSError {
+            print("Failed parsing JSON: \(error)")
+        }
+        
+    }
+    
+    func parseCreateNotification(data: Data) -> Bool{
+        
+        do {
+            if let notificationJSON = try  JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                
+                
+                if let notificationType = notificationJSON["__t"] as? String {
+                    
+                    let realm = try! Realm()
+                    
+                    try! realm.write() {
+                        
+                        if (notificationType == "LimitNotification") {
+                            realm.create(LimitNotification.self, value: notificationJSON, update: .modified)
+                        }
+                        else if (notificationType == "IntervalNotification") {
+                            realm.create(IntervalNotification.self, value: notificationJSON, update: .modified)
+                        }
+                    }
+                }
+                else {
+                    return false
+                }
+                
+                
+            }
+            
+            return true
+        }
+            
+        catch let error as NSError {
+            print("Failed parsing JSON: \(error)")
+            return false
+        }
+        
+    }
+    
+    func parseUpdateNotification(data: Data) -> Bool{
+        
+        do {
+            if let notificationJSON = try  JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                
+                if let notificationType = notificationJSON["__t"] as? String {
+                    let realm = try! Realm()
+                    try! realm.write() {
+                        if (notificationType == "LimitNotification") {
+                            realm.create(LimitNotification.self, value: notificationJSON, update: .modified)
+                        }
+                        else if (notificationType == "IntervalNotification") {
+                            realm.create(IntervalNotification.self, value: notificationJSON, update: .modified)
+                        }
+                    }
+                }
+                else {
+                    return false
+                    
+                }
+            }
+            
+            return true
+        }
+            
+        catch let error as NSError {
+            print("Failed parsing JSON: \(error)")
+            return false
+        }
+    }
+    
+    func parseUpdateNotificationStatus(data: Data) -> Bool{
+        
+        do {
+            if let notificationJSON = try  JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                
+                if let notificationType = notificationJSON["__t"] as? String {
+                    let realm = try! Realm()
+                    try! realm.write() {
+                        
+                        if (notificationType == "LimitNotification") {
+                            realm.create(LimitNotification.self, value: notificationJSON, update: .modified)
+                        }
+                        else if (notificationType == "IntervalNotification") {
+                            realm.create(IntervalNotification.self, value: notificationJSON, update: .modified)
+                        }
+                    }
+                }
+                else {
+                    return false
+                }
+                
+            }
+            
+            return true
+        }
+            
+        catch let error as NSError {
+            print("Failed parsing JSON: \(error)")
+            return false
+        }
+        
+    }
+    
+    func parseDeleteNotification(data: Data) -> Bool{
+        
+        do {
+            if let notificationJSON = try  JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                
+                
+                if let notificationType = notificationJSON["__t"] as? String,
+                    let notificationId = notificationJSON["_id"] as? String {
+                    
+                    let realm = try! Realm()
+                    try! realm.write() {
+                        
+                        if (notificationType == "LimitNotification") {
+                            let notifications = realm.objects(LimitNotification.self).filter("_id = %@", notificationId)
+                            if notifications.count > 0 {
+                                realm.delete(notifications[0])
+                            }
+                            
+                        }
+                        else if (notificationType == "IntervalNotification") {
+                            let notifications = realm.objects(IntervalNotification.self).filter("_id = %@", notificationId)
+                            if notifications.count > 0 {
+                                realm.delete(notifications[0])
+                            }
+                        }
+                        
+                    }
+                    
+                    
+                }
+                else {
+                    return false
+                }
+            }
+            
+            return true
+        }
+            
+        catch let error as NSError {
+            print("Failed parsing JSON: \(error)")
+            return false
+        }
+        
+    }
+    
+    func parsePortfolios(data: Data) -> Bool{
+        
+        do {
+            if let portfoliosJSON = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                
+                
+                if let error = portfoliosJSON["error"] as? [String: Any] {
+                    print(error)
+                    return false
+                }
+                
+                if let errors = portfoliosJSON["errors"] as? [String: Any] {
+                    print(errors)
+                    return false
+                }
+                
+                guard let portfolios = portfoliosJSON["portfolios"] as? [[String: Any]] else {
+                    print("no portfolios found")
+                    return false
+                }
+                
+                let realm = try! Realm()
+                try! realm.write({
+                    
+                    for portfolio in portfolios {
+                        realm.create(Portfolio.self, value: portfolio, update: .modified)
+                    }
+                })
+                
+                let portf = realm.objects(Portfolio.self)
+                print("portfolios = \(portf)")
+                
+            }
+            
+            return true
+        }
+            
+        catch let error as NSError {
+            print("Failed parsing JSON: \(error)")
+            return false
+        }
+        
+    }
+    
+    func parseExchangeBalance(data: Data) -> [CoinBalance]? {
+        
+        do {
+            if let balanceJSON = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                
+                
+                if let error = balanceJSON["error"] as? [String: Any] {
+                    print(error)
+                    return nil
+<<<<<<< HEAD
+              }
+                      
+              catch let error as NSError {
+                print("Failed parsing JSON: \(error)")
+                return nil
+              }
+
+          }
+    
+    func parseAddCoinBalance(data: Data) -> Bool {
+             
+              do {
+                  if let portfolioJSON = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                          
+                        
+                            if let error = portfolioJSON["error"] as? [String: Any] {
+                                print(error)
+                                return false
+                            }
+                            
+                            if let errors = portfolioJSON["errors"] as? [String: Any] {
+                                print(errors)
+                                return false
+                            }
+                            
+                            let realm = try! Realm()
+                            try! realm.write({
+                                    realm.create(Portfolio.self, value: portfolioJSON, update: .modified)
+                            })
+                            
+                            return true
+                    
+                    }
+                
+                return false
+              }
+                      
+              catch let error as NSError {
+                print("Failed parsing JSON: \(error)")
+                return false
+              }
+
+          }
+
+=======
+                }
+                
+                if let errors = balanceJSON["errors"] as? [String: Any] {
+                    print(errors)
+                    return nil
+                }
+                
+                guard let balance = balanceJSON["balance"] as? [[String: Any]] else {
+                    print("no balance key found")
+                    return nil
+                }
+                
+                var coinBalanceArray: [CoinBalance] = []
+                for coin in balance {
+                    let coinBalance = CoinBalance()
+                    coinBalance.symbol = coin["symbol"] as! String
+                    coinBalance.amount = coin["amount"] as! Double
+                    coinBalanceArray.append(coinBalance)
+                }
+                
+                print("coinBalanceArray = \(coinBalanceArray)")
+                return coinBalanceArray
+                
+            }
+            
+            return nil
+        }
+            
+        catch let error as NSError {
+            print("Failed parsing JSON: \(error)")
+            return nil
+        }
+        
+    }
+>>>>>>> 2813cfd6abe74106868522be8772ec5227b5c7a1
+}

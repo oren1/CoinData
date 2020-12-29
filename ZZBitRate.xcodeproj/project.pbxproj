@@ -1,0 +1,1062 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E15D860203068080095304A /* MyStringItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15D85F203068080095304A /* MyStringItemSource.swift */; };
+		0E1B25411FDF2E83001FB2F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B25401FDF2E83001FB2F1 /* AppDelegate.swift */; };
+		0E1B25481FDF2E83001FB2F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1B25461FDF2E83001FB2F1 /* Main.storyboard */; };
+		0E1B254A1FDF2E83001FB2F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E1B25491FDF2E83001FB2F1 /* Assets.xcassets */; };
+		0E1B254D1FDF2E83001FB2F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1B254B1FDF2E83001FB2F1 /* LaunchScreen.storyboard */; };
+		0E1B25551FDF3226001FB2F1 /* RatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B25541FDF3226001FB2F1 /* RatesVC.swift */; };
+		0E1B25571FDF3242001FB2F1 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B25561FDF3242001FB2F1 /* NewsVC.swift */; };
+		0E1B25591FDF36B4001FB2F1 /* OneCoinRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B25581FDF36B4001FB2F1 /* OneCoinRateCell.swift */; };
+		0E1B255B1FDF5C73001FB2F1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B255A1FDF5C73001FB2F1 /* NetworkManager.swift */; };
+		0E1B255E1FDF6379001FB2F1 /* ZZCoinRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B255D1FDF6379001FB2F1 /* ZZCoinRate.swift */; };
+		0E1B25601FDF6AD8001FB2F1 /* parsingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B255F1FDF6AD8001FB2F1 /* parsingManager.swift */; };
+		0E2D858B1FE0444900BB954C /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2D858A1FE0444900BB954C /* NewsItem.swift */; };
+		0E2D858D1FE0614500BB954C /* NewsItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2D858C1FE0614500BB954C /* NewsItemCell.swift */; };
+		0E2D858F1FE0920500BB954C /* BigNewsItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2D858E1FE0920500BB954C /* BigNewsItemCell.swift */; };
+		0E2D85911FE0928000BB954C /* SmallNewsItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2D85901FE0928000BB954C /* SmallNewsItemCell.swift */; };
+		0E2D85931FE09BC700BB954C /* NewsWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2D85921FE09BC700BB954C /* NewsWebVC.swift */; };
+		0E2D85951FE0BE5B00BB954C /* CoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2D85941FE0BE5B00BB954C /* CoinVC.swift */; };
+		0E2D85971FE1B18800BB954C /* chaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2D85961FE1B18800BB954C /* chaceManager.swift */; };
+		0E2D859B1FE2924600BB954C /* HistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2D859A1FE2924600BB954C /* HistoryItem.swift */; };
+		0E2D859D1FE2A91C00BB954C /* CoinHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2D859C1FE2A91C00BB954C /* CoinHistory.swift */; };
+		0E2D85A11FE57BA500BB954C /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2D85A01FE57BA500BB954C /* SocketIOManager.swift */; };
+		0E357BCC2024E410003EB99D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E357BCB2024E410003EB99D /* GoogleService-Info.plist */; };
+		0E5D1C211FF667E0008AAEBF /* CryptoPanicNewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D1C201FF667DF008AAEBF /* CryptoPanicNewsItem.swift */; };
+		0E5D1C231FF85DF2008AAEBF /* CryptoPanicNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D1C221FF85DF2008AAEBF /* CryptoPanicNewsVC.swift */; };
+		0E5D1C251FF85E79008AAEBF /* CryptoPanicNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D1C241FF85E79008AAEBF /* CryptoPanicNewsCell.swift */; };
+		0E5D1C271FF97A4F008AAEBF /* CoinInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D1C261FF97A4F008AAEBF /* CoinInfoVC.swift */; };
+		0EA6BD281FFC4F7100CE609D /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6BD271FFC4F7000CE609D /* BannerViewController.swift */; };
+		0EAEF63C1FE729F3002F8F73 /* FavoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAEF63B1FE729F2002F8F73 /* FavoriesVC.swift */; };
+		0EAEF63E1FE72AEA002F8F73 /* FavoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAEF63D1FE72AEA002F8F73 /* FavoriesCell.swift */; };
+		0EAEF6401FE72CA8002F8F73 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAEF63F1FE72CA8002F8F73 /* UserDataManager.swift */; };
+		0EAEF6421FE82E2D002F8F73 /* CurrnetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAEF6411FE82E2D002F8F73 /* CurrnetItem.swift */; };
+		0EAEF6441FE8307E002F8F73 /* CurrentAggItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAEF6431FE8307E002F8F73 /* CurrentAggItem.swift */; };
+		0EAEF6461FE8901F002F8F73 /* LiveMonitorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAEF6451FE8901F002F8F73 /* LiveMonitorVC.swift */; };
+		0EAEF64A1FE895EB002F8F73 /* TradeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAEF6491FE895EB002F8F73 /* TradeItem.swift */; };
+		0EAEF64C1FE8A737002F8F73 /* TradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAEF64B1FE8A737002F8F73 /* TradeCell.swift */; };
+		0EC64CCA202E18B100B19BBA /* ShareItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC64CC9202E18B100B19BBA /* ShareItem.swift */; };
+		0EC64CCC202E3A4500B19BBA /* ShareItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EC64CCB202E3A4500B19BBA /* ShareItemView.xib */; };
+		0ED22ED21FEC5DB7000E4FD9 /* ZZTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED22ED11FEC5DB7000E4FD9 /* ZZTabBarVC.swift */; };
+		0EF0E3BF1FEB23C000B38C02 /* ExtangeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF0E3BE1FEB23C000B38C02 /* ExtangeCollectionCell.swift */; };
+		1B525CF2BDA1FB494E88FD3E /* Pods_ZZBitRateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB16AB68C758436711F7F5B /* Pods_ZZBitRateTests.framework */; };
+		6B0B59012525BBD200335868 /* AddPortfolioCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0B59002525BBD200335868 /* AddPortfolioCVCell.swift */; };
+		6B3575EB25357E4B00B6FF40 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3575EA25357E4B00B6FF40 /* Exchange.swift */; };
+		6B3575ED2535884E00B6FF40 /* ExchangeTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3575EC2535884E00B6FF40 /* ExchangeTVCell.swift */; };
+		6B3575F12535894F00B6FF40 /* ChooseExchangeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3575F02535894F00B6FF40 /* ChooseExchangeTVC.swift */; };
+		6B35E2A82562B0300000CE64 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B35E2A72562B0300000CE64 /* StoreKit.framework */; };
+		6B3665AF2545D6CD00F00BB5 /* TestTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3665AD2545D6CD00F00BB5 /* TestTVCell.swift */; };
+		6B3665B02545D6CD00F00BB5 /* TestTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3665AE2545D6CD00F00BB5 /* TestTVCell.xib */; };
+		6B3665B22546C6CE00F00BB5 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3665B12546C6CE00F00BB5 /* ScannerViewController.swift */; };
+		6B3665B42549A66800F00BB5 /* EditPortfoliosTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3665B32549A66800F00BB5 /* EditPortfoliosTVC.swift */; };
+		6B36A0FC2508C4CB009BDCAF /* AlertHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B36A0FB2508C4CB009BDCAF /* AlertHeaderView.xib */; };
+		6B36A0FE250E4244009BDCAF /* AddNotificationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B36A0FD250E4243009BDCAF /* AddNotificationTVC.swift */; };
+		6B36CE922532E9FA00CC2907 /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B36CE912532E9FA00CC2907 /* UIImageView+Utils.swift */; };
+		6B3B5CD4256FCEB400A3AC07 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B5CD3256FCEB400A3AC07 /* General.swift */; };
+		6B3F089D2573D81400F5A3DE /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F089C2573D81400F5A3DE /* String+Utils.swift */; };
+		6B3F08A525752B1700F5A3DE /* ZZBitRateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F08A425752B1700F5A3DE /* ZZBitRateTests.swift */; };
+		6B3F08AD25752BD600F5A3DE /* ValidateAppleReceiptTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F08AC25752BD600F5A3DE /* ValidateAppleReceiptTest.swift */; };
+		6B430258256523D700252445 /* PurchaseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B430257256523D700252445 /* PurchaseTVC.swift */; };
+		6B47F84B25862CFE0094EE67 /* AppStoreReceiptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B47F84A25862CFE0094EE67 /* AppStoreReceiptManager.swift */; };
+		6B5764CF2507808F00AA54B8 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5764CE2507808F00AA54B8 /* Notification.swift */; };
+		6B588F14257A6D7C0003355E /* GeneralMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B588F13257A6D7C0003355E /* GeneralMessageView.xib */; };
+		6B588F16257A6E3C0003355E /* GeneralMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B588F15257A6E3C0003355E /* GeneralMessageView.swift */; };
+		6B5B6C5E25791E690050C7B5 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5B6C5D25791E690050C7B5 /* WebSocketManager.swift */; };
+		6B71F628258B5F140037EEE5 /* FetchSettingsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B71F627258B5F140037EEE5 /* FetchSettingsTest.swift */; };
+		6B7B689D2536ACDE00BC4EFF /* AddPortfolioTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B689C2536ACDE00BC4EFF /* AddPortfolioTVC.swift */; };
+		6B7DD7FD25065A7A0098EA94 /* AlertsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DD7FC25065A7A0098EA94 /* AlertsVC.swift */; };
+		6B7DD80125065CD80098EA94 /* AlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DD80025065CD80098EA94 /* AlertTableViewCell.swift */; };
+		6B85C4B125343BE400068365 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B85C4B025343BE400068365 /* UIView+Utils.swift */; };
+		6B85C4B325344CA600068365 /* EnterNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B85C4B225344CA600068365 /* EnterNameVC.swift */; };
+		6B85C4B525348EA900068365 /* URLRequest+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B85C4B425348EA900068365 /* URLRequest+Utils.swift */; };
+		6B8632E0255BD03500B17628 /* StringProtocol+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8632DF255BD03500B17628 /* StringProtocol+Utils.swift */; };
+		6B8632E2255C306C00B17628 /* Double+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8632E1255C306C00B17628 /* Double+Utils.swift */; };
+		6B8CE4E22545C91F00CE76F3 /* PortfolioNameTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8CE4E12545C91F00CE76F3 /* PortfolioNameTVCell.swift */; };
+		6B8CE4E42545C9DB00CE76F3 /* ExchangeNameTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8CE4E32545C9DB00CE76F3 /* ExchangeNameTVCell.swift */; };
+		6B8CE4E62545CA2F00CE76F3 /* ExchangeDescriptionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8CE4E52545CA2F00CE76F3 /* ExchangeDescriptionTVCell.swift */; };
+		6B8CE4E82545CA6D00CE76F3 /* PermissionKeyTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8CE4E72545CA6D00CE76F3 /* PermissionKeyTVCell.swift */; };
+		6B8E9F5C2577879A00647ECD /* Results+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E9F5B2577879A00647ECD /* Results+Utils.swift */; };
+		6B9692C72529B16F0064D386 /* PortfolioTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9692C62529B16F0064D386 /* PortfolioTitleView.xib */; };
+		6BA7FDFF252496EB007C2B06 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA7FDFE252496EA007C2B06 /* Portfolio.swift */; };
+		6BBCADB02536DD8E00BE83A2 /* UIButton+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBCADAF2536DD8E00BE83A2 /* UIButton+Utils.swift */; };
+		6BC32639252476FC008494CE /* PortfolioCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC32638252476FC008494CE /* PortfolioCVCell.swift */; };
+		6BC3263B25248ED2008494CE /* PortfoliosCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC3263A25248ED2008494CE /* PortfoliosCVC.swift */; };
+		6BDC64C1252C442800A99CD2 /* AddCoinTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC64C0252C442800A99CD2 /* AddCoinTVCell.swift */; };
+		6BDC64C3252C445A00A99CD2 /* PortfolioCoinTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC64C2252C445A00A99CD2 /* PortfolioCoinTVCell.swift */; };
+		6BDC64C5252C46A700A99CD2 /* PortfolioTableSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDC64C4252C46A700A99CD2 /* PortfolioTableSectionHeader.xib */; };
+		6BDC64C7252C47D400A99CD2 /* PortfolioTableSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC64C6252C47D400A99CD2 /* PortfolioTableSectionHeader.swift */; };
+		6BDC64C9252CA7BF00A99CD2 /* PortfolioTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC64C8252CA7BF00A99CD2 /* PortfolioTitleView.swift */; };
+		6BDC64CB252D9D7700A99CD2 /* Notification+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC64CA252D9D7600A99CD2 /* Notification+Names.swift */; };
+		6BE2DF81256A7FD6008233A6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2DF80256A7FD6008233A6 /* Settings.swift */; };
+		6BFA2C31250525160083CA53 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA2C30250525160083CA53 /* User.swift */; };
+		AC2558FE254DFE3B00A72814 /* IAP_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2558FD254DFE3B00A72814 /* IAP_VC.swift */; };
+		AC3619412136FF0000917CAA /* PortfolioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3619402136FF0000917CAA /* PortfolioVC.swift */; };
+		AC36196421380ED400917CAA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC36196321380ED400917CAA /* CoreDataManager.swift */; };
+		AC41001F254DCEDB00A3F0BD /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41001E254DCEDB00A3F0BD /* IAPManager.swift */; };
+		AC5EF79921425B1E005BA8DB /* EditProtfolioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5EF79821425B1D005BA8DB /* EditProtfolioVC.swift */; };
+		AC5EF79B21425C23005BA8DB /* EditProtfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5EF79A21425C23005BA8DB /* EditProtfolioTableViewCell.swift */; };
+		AC6A764521392FC700B59893 /* AddNewHoldingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A764421392FC700B59893 /* AddNewHoldingVC.swift */; };
+		AC6A7649213942F400B59893 /* ChooceCoinTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A7648213942F400B59893 /* ChooceCoinTVC.swift */; };
+		AC6A764B213944D300B59893 /* ChooseCoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A764A213944D300B59893 /* ChooseCoinTableViewCell.swift */; };
+		AC9EA24421412BB400519BC0 /* ProtfolioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9EA24321412BB400519BC0 /* ProtfolioCollectionViewCell.swift */; };
+		ACA49668252D084000869463 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA49667252D084000869463 /* Utils.swift */; };
+		ACA4966A252E784200869463 /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA49669252E784200869463 /* AppStoreReviewManager.swift */; };
+		ACDB40872138779400FDBDF8 /* UserHolding.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB40862138779400FDBDF8 /* UserHolding.swift */; };
+		CF591DF62B3994810740F556 /* Pods_ZZBitRate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 930DF24D79549A32FAB1D207 /* Pods_ZZBitRate.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B3F08A725752B1700F5A3DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E1B25351FDF2E83001FB2F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E1B253C1FDF2E83001FB2F1;
+			remoteInfo = ZZBitRate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E15D85F203068080095304A /* MyStringItemSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStringItemSource.swift; sourceTree = "<group>"; };
+		0E1B253D1FDF2E83001FB2F1 /* ZZBitRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZBitRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E1B25401FDF2E83001FB2F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0E1B25471FDF2E83001FB2F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0E1B25491FDF2E83001FB2F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0E1B254C1FDF2E83001FB2F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0E1B254E1FDF2E83001FB2F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E1B25541FDF3226001FB2F1 /* RatesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesVC.swift; sourceTree = "<group>"; };
+		0E1B25561FDF3242001FB2F1 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		0E1B25581FDF36B4001FB2F1 /* OneCoinRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCoinRateCell.swift; sourceTree = "<group>"; };
+		0E1B255A1FDF5C73001FB2F1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0E1B255D1FDF6379001FB2F1 /* ZZCoinRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZCoinRate.swift; sourceTree = "<group>"; };
+		0E1B255F1FDF6AD8001FB2F1 /* parsingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parsingManager.swift; sourceTree = "<group>"; };
+		0E2D858A1FE0444900BB954C /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		0E2D858C1FE0614500BB954C /* NewsItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemCell.swift; sourceTree = "<group>"; };
+		0E2D858E1FE0920500BB954C /* BigNewsItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigNewsItemCell.swift; sourceTree = "<group>"; };
+		0E2D85901FE0928000BB954C /* SmallNewsItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallNewsItemCell.swift; sourceTree = "<group>"; };
+		0E2D85921FE09BC700BB954C /* NewsWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWebVC.swift; sourceTree = "<group>"; };
+		0E2D85941FE0BE5B00BB954C /* CoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinVC.swift; sourceTree = "<group>"; };
+		0E2D85961FE1B18800BB954C /* chaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaceManager.swift; sourceTree = "<group>"; };
+		0E2D859A1FE2924600BB954C /* HistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItem.swift; sourceTree = "<group>"; };
+		0E2D859C1FE2A91C00BB954C /* CoinHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinHistory.swift; sourceTree = "<group>"; };
+		0E2D85A01FE57BA500BB954C /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
+		0E357BCB2024E410003EB99D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0E5D1C201FF667DF008AAEBF /* CryptoPanicNewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPanicNewsItem.swift; sourceTree = "<group>"; };
+		0E5D1C221FF85DF2008AAEBF /* CryptoPanicNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPanicNewsVC.swift; sourceTree = "<group>"; };
+		0E5D1C241FF85E79008AAEBF /* CryptoPanicNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPanicNewsCell.swift; sourceTree = "<group>"; };
+		0E5D1C261FF97A4F008AAEBF /* CoinInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinInfoVC.swift; sourceTree = "<group>"; };
+		0EA6BD271FFC4F7000CE609D /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
+		0EAEF63B1FE729F2002F8F73 /* FavoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriesVC.swift; sourceTree = "<group>"; };
+		0EAEF63D1FE72AEA002F8F73 /* FavoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriesCell.swift; sourceTree = "<group>"; };
+		0EAEF63F1FE72CA8002F8F73 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
+		0EAEF6411FE82E2D002F8F73 /* CurrnetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrnetItem.swift; sourceTree = "<group>"; };
+		0EAEF6431FE8307E002F8F73 /* CurrentAggItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAggItem.swift; sourceTree = "<group>"; };
+		0EAEF6451FE8901F002F8F73 /* LiveMonitorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMonitorVC.swift; sourceTree = "<group>"; };
+		0EAEF6491FE895EB002F8F73 /* TradeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeItem.swift; sourceTree = "<group>"; };
+		0EAEF64B1FE8A737002F8F73 /* TradeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeCell.swift; sourceTree = "<group>"; };
+		0EC64CC9202E18B100B19BBA /* ShareItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareItem.swift; sourceTree = "<group>"; };
+		0EC64CCB202E3A4500B19BBA /* ShareItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareItemView.xib; sourceTree = "<group>"; };
+		0ED22ED11FEC5DB7000E4FD9 /* ZZTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZTabBarVC.swift; sourceTree = "<group>"; };
+		0EF0E3BE1FEB23C000B38C02 /* ExtangeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtangeCollectionCell.swift; sourceTree = "<group>"; };
+		6B0B59002525BBD200335868 /* AddPortfolioCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPortfolioCVCell.swift; sourceTree = "<group>"; };
+		6B3575EA25357E4B00B6FF40 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
+		6B3575EC2535884E00B6FF40 /* ExchangeTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeTVCell.swift; sourceTree = "<group>"; };
+		6B3575F02535894F00B6FF40 /* ChooseExchangeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseExchangeTVC.swift; sourceTree = "<group>"; };
+		6B35E2A72562B0300000CE64 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		6B3665AD2545D6CD00F00BB5 /* TestTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTVCell.swift; sourceTree = "<group>"; };
+		6B3665AE2545D6CD00F00BB5 /* TestTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTVCell.xib; sourceTree = "<group>"; };
+		6B3665B12546C6CE00F00BB5 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		6B3665B32549A66800F00BB5 /* EditPortfoliosTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPortfoliosTVC.swift; sourceTree = "<group>"; };
+		6B36A0FB2508C4CB009BDCAF /* AlertHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertHeaderView.xib; sourceTree = "<group>"; };
+		6B36A0FD250E4243009BDCAF /* AddNotificationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationTVC.swift; sourceTree = "<group>"; };
+		6B36A4782498B8B6006A425B /* ZZBitRate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZZBitRate.entitlements; sourceTree = "<group>"; };
+		6B36CE912532E9FA00CC2907 /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
+		6B3B5CD3256FCEB400A3AC07 /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
+		6B3F089C2573D81400F5A3DE /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		6B3F08A225752B1700F5A3DE /* ZZBitRateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZBitRateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3F08A425752B1700F5A3DE /* ZZBitRateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZBitRateTests.swift; sourceTree = "<group>"; };
+		6B3F08A625752B1700F5A3DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B3F08AC25752BD600F5A3DE /* ValidateAppleReceiptTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateAppleReceiptTest.swift; sourceTree = "<group>"; };
+		6B430257256523D700252445 /* PurchaseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTVC.swift; sourceTree = "<group>"; };
+		6B47F84A25862CFE0094EE67 /* AppStoreReceiptManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReceiptManager.swift; sourceTree = "<group>"; };
+		6B5764CE2507808F00AA54B8 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		6B588F13257A6D7C0003355E /* GeneralMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralMessageView.xib; sourceTree = "<group>"; };
+		6B588F15257A6E3C0003355E /* GeneralMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMessageView.swift; sourceTree = "<group>"; };
+		6B5B6C5D25791E690050C7B5 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
+		6B71F627258B5F140037EEE5 /* FetchSettingsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSettingsTest.swift; sourceTree = "<group>"; };
+		6B7B689C2536ACDE00BC4EFF /* AddPortfolioTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPortfolioTVC.swift; sourceTree = "<group>"; };
+		6B7DD7FC25065A7A0098EA94 /* AlertsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsVC.swift; sourceTree = "<group>"; };
+		6B7DD80025065CD80098EA94 /* AlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableViewCell.swift; sourceTree = "<group>"; };
+		6B85C4B025343BE400068365 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
+		6B85C4B225344CA600068365 /* EnterNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNameVC.swift; sourceTree = "<group>"; };
+		6B85C4B425348EA900068365 /* URLRequest+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Utils.swift"; sourceTree = "<group>"; };
+		6B8632DF255BD03500B17628 /* StringProtocol+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+Utils.swift"; sourceTree = "<group>"; };
+		6B8632E1255C306C00B17628 /* Double+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Utils.swift"; sourceTree = "<group>"; };
+		6B8CE4E12545C91F00CE76F3 /* PortfolioNameTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioNameTVCell.swift; sourceTree = "<group>"; };
+		6B8CE4E32545C9DB00CE76F3 /* ExchangeNameTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeNameTVCell.swift; sourceTree = "<group>"; };
+		6B8CE4E52545CA2F00CE76F3 /* ExchangeDescriptionTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeDescriptionTVCell.swift; sourceTree = "<group>"; };
+		6B8CE4E72545CA6D00CE76F3 /* PermissionKeyTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionKeyTVCell.swift; sourceTree = "<group>"; };
+		6B8E9F5B2577879A00647ECD /* Results+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results+Utils.swift"; sourceTree = "<group>"; };
+		6B9692C62529B16F0064D386 /* PortfolioTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioTitleView.xib; sourceTree = "<group>"; };
+		6BA7FDFE252496EA007C2B06 /* Portfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
+		6BBCADAF2536DD8E00BE83A2 /* UIButton+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Utils.swift"; sourceTree = "<group>"; };
+		6BC32638252476FC008494CE /* PortfolioCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCVCell.swift; sourceTree = "<group>"; };
+		6BC3263A25248ED2008494CE /* PortfoliosCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfoliosCVC.swift; sourceTree = "<group>"; };
+		6BDC64C0252C442800A99CD2 /* AddCoinTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoinTVCell.swift; sourceTree = "<group>"; };
+		6BDC64C2252C445A00A99CD2 /* PortfolioCoinTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCoinTVCell.swift; sourceTree = "<group>"; };
+		6BDC64C4252C46A700A99CD2 /* PortfolioTableSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioTableSectionHeader.xib; sourceTree = "<group>"; };
+		6BDC64C6252C47D400A99CD2 /* PortfolioTableSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTableSectionHeader.swift; sourceTree = "<group>"; };
+		6BDC64C8252CA7BF00A99CD2 /* PortfolioTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTitleView.swift; sourceTree = "<group>"; };
+		6BDC64CA252D9D7600A99CD2 /* Notification+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Names.swift"; sourceTree = "<group>"; };
+		6BE2DF80256A7FD6008233A6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		6BFA2C30250525160083CA53 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7D460F0FA5EC92A22DC9DB3E /* Pods-ZZBitRateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZBitRateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZZBitRateTests/Pods-ZZBitRateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		930DF24D79549A32FAB1D207 /* Pods_ZZBitRate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZZBitRate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2558FD254DFE3B00A72814 /* IAP_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAP_VC.swift; sourceTree = "<group>"; };
+		AC3619402136FF0000917CAA /* PortfolioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioVC.swift; sourceTree = "<group>"; };
+		AC36196321380ED400917CAA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		AC41001E254DCEDB00A3F0BD /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		AC5EF79821425B1D005BA8DB /* EditProtfolioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProtfolioVC.swift; sourceTree = "<group>"; };
+		AC5EF79A21425C23005BA8DB /* EditProtfolioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProtfolioTableViewCell.swift; sourceTree = "<group>"; };
+		AC6A764421392FC700B59893 /* AddNewHoldingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewHoldingVC.swift; sourceTree = "<group>"; };
+		AC6A7648213942F400B59893 /* ChooceCoinTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooceCoinTVC.swift; sourceTree = "<group>"; };
+		AC6A764A213944D300B59893 /* ChooseCoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCoinTableViewCell.swift; sourceTree = "<group>"; };
+		AC9EA24321412BB400519BC0 /* ProtfolioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtfolioCollectionViewCell.swift; sourceTree = "<group>"; };
+		ACA49667252D084000869463 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		ACA49669252E784200869463 /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
+		ACDB40862138779400FDBDF8 /* UserHolding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHolding.swift; sourceTree = "<group>"; };
+		B0AC92C22170DE846E86C29E /* Pods-ZZBitRate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZBitRate.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZZBitRate/Pods-ZZBitRate.release.xcconfig"; sourceTree = "<group>"; };
+		BD481D9559E009A46B21D338 /* Pods-ZZBitRateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZBitRateTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZZBitRateTests/Pods-ZZBitRateTests.release.xcconfig"; sourceTree = "<group>"; };
+		CF1BDB8C3C65BE5B9E770ABD /* Pods-ZZBitRate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZBitRate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZZBitRate/Pods-ZZBitRate.debug.xcconfig"; sourceTree = "<group>"; };
+		DBB16AB68C758436711F7F5B /* Pods_ZZBitRateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZZBitRateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E1B253A1FDF2E83001FB2F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF591DF62B3994810740F556 /* Pods_ZZBitRate.framework in Frameworks */,
+				6B35E2A82562B0300000CE64 /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B3F089F25752B1700F5A3DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B525CF2BDA1FB494E88FD3E /* Pods_ZZBitRateTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E1B25341FDF2E83001FB2F1 = {
+			isa = PBXGroup;
+			children = (
+				0E1B253F1FDF2E83001FB2F1 /* ZZBitRate */,
+				6B3F08A325752B1700F5A3DE /* ZZBitRateTests */,
+				0E1B253E1FDF2E83001FB2F1 /* Products */,
+				D4137CC1998C8618170DE5FB /* Pods */,
+				4948D91F8E9992D962E3683F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0E1B253E1FDF2E83001FB2F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E1B253D1FDF2E83001FB2F1 /* ZZBitRate.app */,
+				6B3F08A225752B1700F5A3DE /* ZZBitRateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0E1B253F1FDF2E83001FB2F1 /* ZZBitRate */ = {
+			isa = PBXGroup;
+			children = (
+				6BDC64CC252D9D8900A99CD2 /* Extensions */,
+				6B36A4782498B8B6006A425B /* ZZBitRate.entitlements */,
+				0EA6BD291FFC4F8700CE609D /* SubClass */,
+				0E2D85991FE1C66A00BB954C /* Cells */,
+				0E2D85981FE1C65700BB954C /* Managers */,
+				0E1B255C1FDF635E001FB2F1 /* Model */,
+				0E1B25401FDF2E83001FB2F1 /* AppDelegate.swift */,
+				0ED22ED11FEC5DB7000E4FD9 /* ZZTabBarVC.swift */,
+				0E1B25541FDF3226001FB2F1 /* RatesVC.swift */,
+				0E1B25561FDF3242001FB2F1 /* NewsVC.swift */,
+				0E5D1C221FF85DF2008AAEBF /* CryptoPanicNewsVC.swift */,
+				0E2D85941FE0BE5B00BB954C /* CoinVC.swift */,
+				0E2D85921FE09BC700BB954C /* NewsWebVC.swift */,
+				0EAEF63B1FE729F2002F8F73 /* FavoriesVC.swift */,
+				0EAEF6451FE8901F002F8F73 /* LiveMonitorVC.swift */,
+				0E5D1C261FF97A4F008AAEBF /* CoinInfoVC.swift */,
+				AC3619402136FF0000917CAA /* PortfolioVC.swift */,
+				0E1B25461FDF2E83001FB2F1 /* Main.storyboard */,
+				0E1B25491FDF2E83001FB2F1 /* Assets.xcassets */,
+				0E1B254B1FDF2E83001FB2F1 /* LaunchScreen.storyboard */,
+				0E1B254E1FDF2E83001FB2F1 /* Info.plist */,
+				0E357BCB2024E410003EB99D /* GoogleService-Info.plist */,
+				0EC64CC9202E18B100B19BBA /* ShareItem.swift */,
+				0EC64CCB202E3A4500B19BBA /* ShareItemView.xib */,
+				0E15D85F203068080095304A /* MyStringItemSource.swift */,
+				AC6A764421392FC700B59893 /* AddNewHoldingVC.swift */,
+				AC6A7648213942F400B59893 /* ChooceCoinTVC.swift */,
+				AC5EF79821425B1D005BA8DB /* EditProtfolioVC.swift */,
+				6B7DD7FC25065A7A0098EA94 /* AlertsVC.swift */,
+				6B36A0FB2508C4CB009BDCAF /* AlertHeaderView.xib */,
+				6B36A0FD250E4243009BDCAF /* AddNotificationTVC.swift */,
+				6BC3263A25248ED2008494CE /* PortfoliosCVC.swift */,
+				6BDC64C8252CA7BF00A99CD2 /* PortfolioTitleView.swift */,
+				6B9692C62529B16F0064D386 /* PortfolioTitleView.xib */,
+				6BDC64C4252C46A700A99CD2 /* PortfolioTableSectionHeader.xib */,
+				6BDC64C6252C47D400A99CD2 /* PortfolioTableSectionHeader.swift */,
+				ACA49667252D084000869463 /* Utils.swift */,
+				6B85C4B225344CA600068365 /* EnterNameVC.swift */,
+				6B3575F02535894F00B6FF40 /* ChooseExchangeTVC.swift */,
+				6B7B689C2536ACDE00BC4EFF /* AddPortfolioTVC.swift */,
+				6B3665B12546C6CE00F00BB5 /* ScannerViewController.swift */,
+				6B3665B32549A66800F00BB5 /* EditPortfoliosTVC.swift */,
+				AC2558FD254DFE3B00A72814 /* IAP_VC.swift */,
+				6B430257256523D700252445 /* PurchaseTVC.swift */,
+				6B588F13257A6D7C0003355E /* GeneralMessageView.xib */,
+				6B588F15257A6E3C0003355E /* GeneralMessageView.swift */,
+			);
+			path = ZZBitRate;
+			sourceTree = "<group>";
+		};
+		0E1B255C1FDF635E001FB2F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E1B255D1FDF6379001FB2F1 /* ZZCoinRate.swift */,
+				0E2D858A1FE0444900BB954C /* NewsItem.swift */,
+				0E2D859A1FE2924600BB954C /* HistoryItem.swift */,
+				0E2D859C1FE2A91C00BB954C /* CoinHistory.swift */,
+				0EAEF6411FE82E2D002F8F73 /* CurrnetItem.swift */,
+				0EAEF6431FE8307E002F8F73 /* CurrentAggItem.swift */,
+				0EAEF6491FE895EB002F8F73 /* TradeItem.swift */,
+				0E5D1C201FF667DF008AAEBF /* CryptoPanicNewsItem.swift */,
+				ACDB40862138779400FDBDF8 /* UserHolding.swift */,
+				6BFA2C30250525160083CA53 /* User.swift */,
+				6B5764CE2507808F00AA54B8 /* Notification.swift */,
+				6BA7FDFE252496EA007C2B06 /* Portfolio.swift */,
+				6B3575EA25357E4B00B6FF40 /* Exchange.swift */,
+				6BE2DF80256A7FD6008233A6 /* Settings.swift */,
+				6B3B5CD3256FCEB400A3AC07 /* General.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E2D85981FE1C65700BB954C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0E1B255A1FDF5C73001FB2F1 /* NetworkManager.swift */,
+				0E1B255F1FDF6AD8001FB2F1 /* parsingManager.swift */,
+				0E2D85961FE1B18800BB954C /* chaceManager.swift */,
+				0E2D85A01FE57BA500BB954C /* SocketIOManager.swift */,
+				0EAEF63F1FE72CA8002F8F73 /* UserDataManager.swift */,
+				AC36196321380ED400917CAA /* CoreDataManager.swift */,
+				ACA49669252E784200869463 /* AppStoreReviewManager.swift */,
+				AC41001E254DCEDB00A3F0BD /* IAPManager.swift */,
+				6B5B6C5D25791E690050C7B5 /* WebSocketManager.swift */,
+				6B47F84A25862CFE0094EE67 /* AppStoreReceiptManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0E2D85991FE1C66A00BB954C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0E1B25581FDF36B4001FB2F1 /* OneCoinRateCell.swift */,
+				0E2D858C1FE0614500BB954C /* NewsItemCell.swift */,
+				0E2D858E1FE0920500BB954C /* BigNewsItemCell.swift */,
+				0E2D85901FE0928000BB954C /* SmallNewsItemCell.swift */,
+				0EAEF63D1FE72AEA002F8F73 /* FavoriesCell.swift */,
+				0EAEF64B1FE8A737002F8F73 /* TradeCell.swift */,
+				0EF0E3BE1FEB23C000B38C02 /* ExtangeCollectionCell.swift */,
+				0E5D1C241FF85E79008AAEBF /* CryptoPanicNewsCell.swift */,
+				AC6A764A213944D300B59893 /* ChooseCoinTableViewCell.swift */,
+				AC9EA24321412BB400519BC0 /* ProtfolioCollectionViewCell.swift */,
+				AC5EF79A21425C23005BA8DB /* EditProtfolioTableViewCell.swift */,
+				6B7DD80025065CD80098EA94 /* AlertTableViewCell.swift */,
+				6BC32638252476FC008494CE /* PortfolioCVCell.swift */,
+				6B0B59002525BBD200335868 /* AddPortfolioCVCell.swift */,
+				6BDC64C0252C442800A99CD2 /* AddCoinTVCell.swift */,
+				6BDC64C2252C445A00A99CD2 /* PortfolioCoinTVCell.swift */,
+				6B3575EC2535884E00B6FF40 /* ExchangeTVCell.swift */,
+				6B8CE4E12545C91F00CE76F3 /* PortfolioNameTVCell.swift */,
+				6B8CE4E32545C9DB00CE76F3 /* ExchangeNameTVCell.swift */,
+				6B8CE4E52545CA2F00CE76F3 /* ExchangeDescriptionTVCell.swift */,
+				6B8CE4E72545CA6D00CE76F3 /* PermissionKeyTVCell.swift */,
+				6B3665AD2545D6CD00F00BB5 /* TestTVCell.swift */,
+				6B3665AE2545D6CD00F00BB5 /* TestTVCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0EA6BD291FFC4F8700CE609D /* SubClass */ = {
+			isa = PBXGroup;
+			children = (
+				0EA6BD271FFC4F7000CE609D /* BannerViewController.swift */,
+			);
+			path = SubClass;
+			sourceTree = "<group>";
+		};
+		4948D91F8E9992D962E3683F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B35E2A72562B0300000CE64 /* StoreKit.framework */,
+				930DF24D79549A32FAB1D207 /* Pods_ZZBitRate.framework */,
+				DBB16AB68C758436711F7F5B /* Pods_ZZBitRateTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B3F08A325752B1700F5A3DE /* ZZBitRateTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B3F08A425752B1700F5A3DE /* ZZBitRateTests.swift */,
+				6B3F08A625752B1700F5A3DE /* Info.plist */,
+				6B3F08AC25752BD600F5A3DE /* ValidateAppleReceiptTest.swift */,
+				6B71F627258B5F140037EEE5 /* FetchSettingsTest.swift */,
+			);
+			path = ZZBitRateTests;
+			sourceTree = "<group>";
+		};
+		6BDC64CC252D9D8900A99CD2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6BDC64CA252D9D7600A99CD2 /* Notification+Names.swift */,
+				6B36CE912532E9FA00CC2907 /* UIImageView+Utils.swift */,
+				6B85C4B025343BE400068365 /* UIView+Utils.swift */,
+				6B85C4B425348EA900068365 /* URLRequest+Utils.swift */,
+				6BBCADAF2536DD8E00BE83A2 /* UIButton+Utils.swift */,
+				6B8632DF255BD03500B17628 /* StringProtocol+Utils.swift */,
+				6B8632E1255C306C00B17628 /* Double+Utils.swift */,
+				6B3F089C2573D81400F5A3DE /* String+Utils.swift */,
+				6B8E9F5B2577879A00647ECD /* Results+Utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D4137CC1998C8618170DE5FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF1BDB8C3C65BE5B9E770ABD /* Pods-ZZBitRate.debug.xcconfig */,
+				B0AC92C22170DE846E86C29E /* Pods-ZZBitRate.release.xcconfig */,
+				7D460F0FA5EC92A22DC9DB3E /* Pods-ZZBitRateTests.debug.xcconfig */,
+				BD481D9559E009A46B21D338 /* Pods-ZZBitRateTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E1B253C1FDF2E83001FB2F1 /* ZZBitRate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E1B25511FDF2E83001FB2F1 /* Build configuration list for PBXNativeTarget "ZZBitRate" */;
+			buildPhases = (
+				CF69780E4825125A41A8C20C /* [CP] Check Pods Manifest.lock */,
+				0E1B25391FDF2E83001FB2F1 /* Sources */,
+				0E1B253A1FDF2E83001FB2F1 /* Frameworks */,
+				0E1B253B1FDF2E83001FB2F1 /* Resources */,
+				3D2D03B9536B983EC80AE0DF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZZBitRate;
+			productName = ZZBitRate;
+			productReference = 0E1B253D1FDF2E83001FB2F1 /* ZZBitRate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6B3F08A125752B1700F5A3DE /* ZZBitRateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B3F08AB25752B1800F5A3DE /* Build configuration list for PBXNativeTarget "ZZBitRateTests" */;
+			buildPhases = (
+				6CEE0DBF34F63FD3BA952F19 /* [CP] Check Pods Manifest.lock */,
+				6B3F089E25752B1700F5A3DE /* Sources */,
+				6B3F089F25752B1700F5A3DE /* Frameworks */,
+				6B3F08A025752B1700F5A3DE /* Resources */,
+				6A88D7213E3631A4924E99F4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B3F08A825752B1700F5A3DE /* PBXTargetDependency */,
+			);
+			name = ZZBitRateTests;
+			productName = ZZBitRateTests;
+			productReference = 6B3F08A225752B1700F5A3DE /* ZZBitRateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E1B25351FDF2E83001FB2F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = aviza;
+				TargetAttributes = {
+					0E1B253C1FDF2E83001FB2F1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					6B3F08A125752B1700F5A3DE = {
+						CreatedOnToolsVersion = 11.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0E1B253C1FDF2E83001FB2F1;
+					};
+				};
+			};
+			buildConfigurationList = 0E1B25381FDF2E83001FB2F1 /* Build configuration list for PBXProject "ZZBitRate" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0E1B25341FDF2E83001FB2F1;
+			productRefGroup = 0E1B253E1FDF2E83001FB2F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E1B253C1FDF2E83001FB2F1 /* ZZBitRate */,
+				6B3F08A125752B1700F5A3DE /* ZZBitRateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E1B253B1FDF2E83001FB2F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EC64CCC202E3A4500B19BBA /* ShareItemView.xib in Resources */,
+				0E1B254D1FDF2E83001FB2F1 /* LaunchScreen.storyboard in Resources */,
+				6B36A0FC2508C4CB009BDCAF /* AlertHeaderView.xib in Resources */,
+				6B588F14257A6D7C0003355E /* GeneralMessageView.xib in Resources */,
+				6B3665B02545D6CD00F00BB5 /* TestTVCell.xib in Resources */,
+				0E357BCC2024E410003EB99D /* GoogleService-Info.plist in Resources */,
+				6BDC64C5252C46A700A99CD2 /* PortfolioTableSectionHeader.xib in Resources */,
+				0E1B254A1FDF2E83001FB2F1 /* Assets.xcassets in Resources */,
+				0E1B25481FDF2E83001FB2F1 /* Main.storyboard in Resources */,
+				6B9692C72529B16F0064D386 /* PortfolioTitleView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B3F08A025752B1700F5A3DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D2D03B9536B983EC80AE0DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZZBitRate/Pods-ZZBitRate-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftChart/SwiftChart.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftChart.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZZBitRate/Pods-ZZBitRate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A88D7213E3631A4924E99F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZZBitRateTests/Pods-ZZBitRateTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZZBitRateTests/Pods-ZZBitRateTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CEE0DBF34F63FD3BA952F19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZZBitRateTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF69780E4825125A41A8C20C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZZBitRate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E1B25391FDF2E83001FB2F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B36A0FE250E4244009BDCAF /* AddNotificationTVC.swift in Sources */,
+				0E2D858F1FE0920500BB954C /* BigNewsItemCell.swift in Sources */,
+				0EAEF63C1FE729F3002F8F73 /* FavoriesVC.swift in Sources */,
+				ACDB40872138779400FDBDF8 /* UserHolding.swift in Sources */,
+				6B8E9F5C2577879A00647ECD /* Results+Utils.swift in Sources */,
+				0EAEF63E1FE72AEA002F8F73 /* FavoriesCell.swift in Sources */,
+				AC9EA24421412BB400519BC0 /* ProtfolioCollectionViewCell.swift in Sources */,
+				6B5764CF2507808F00AA54B8 /* Notification.swift in Sources */,
+				0E5D1C231FF85DF2008AAEBF /* CryptoPanicNewsVC.swift in Sources */,
+				AC6A764B213944D300B59893 /* ChooseCoinTableViewCell.swift in Sources */,
+				0E1B25601FDF6AD8001FB2F1 /* parsingManager.swift in Sources */,
+				0ED22ED21FEC5DB7000E4FD9 /* ZZTabBarVC.swift in Sources */,
+				6B7DD7FD25065A7A0098EA94 /* AlertsVC.swift in Sources */,
+				6B3575EB25357E4B00B6FF40 /* Exchange.swift in Sources */,
+				AC36196421380ED400917CAA /* CoreDataManager.swift in Sources */,
+				0E2D85971FE1B18800BB954C /* chaceManager.swift in Sources */,
+				0E1B25551FDF3226001FB2F1 /* RatesVC.swift in Sources */,
+				0E1B25411FDF2E83001FB2F1 /* AppDelegate.swift in Sources */,
+				6B3665B22546C6CE00F00BB5 /* ScannerViewController.swift in Sources */,
+				6BDC64CB252D9D7700A99CD2 /* Notification+Names.swift in Sources */,
+				6B7B689D2536ACDE00BC4EFF /* AddPortfolioTVC.swift in Sources */,
+				0E1B255B1FDF5C73001FB2F1 /* NetworkManager.swift in Sources */,
+				ACA49668252D084000869463 /* Utils.swift in Sources */,
+				6B3B5CD4256FCEB400A3AC07 /* General.swift in Sources */,
+				0EA6BD281FFC4F7100CE609D /* BannerViewController.swift in Sources */,
+				6B8CE4E22545C91F00CE76F3 /* PortfolioNameTVCell.swift in Sources */,
+				6B8CE4E42545C9DB00CE76F3 /* ExchangeNameTVCell.swift in Sources */,
+				6B8CE4E82545CA6D00CE76F3 /* PermissionKeyTVCell.swift in Sources */,
+				AC5EF79921425B1E005BA8DB /* EditProtfolioVC.swift in Sources */,
+				0E2D858D1FE0614500BB954C /* NewsItemCell.swift in Sources */,
+				0E2D859D1FE2A91C00BB954C /* CoinHistory.swift in Sources */,
+				0EF0E3BF1FEB23C000B38C02 /* ExtangeCollectionCell.swift in Sources */,
+				0E5D1C211FF667E0008AAEBF /* CryptoPanicNewsItem.swift in Sources */,
+				6B0B59012525BBD200335868 /* AddPortfolioCVCell.swift in Sources */,
+				6BC3263B25248ED2008494CE /* PortfoliosCVC.swift in Sources */,
+				0EC64CCA202E18B100B19BBA /* ShareItem.swift in Sources */,
+				6B3575F12535894F00B6FF40 /* ChooseExchangeTVC.swift in Sources */,
+				0E5D1C271FF97A4F008AAEBF /* CoinInfoVC.swift in Sources */,
+				6B3665AF2545D6CD00F00BB5 /* TestTVCell.swift in Sources */,
+				0E2D85A11FE57BA500BB954C /* SocketIOManager.swift in Sources */,
+				6BFA2C31250525160083CA53 /* User.swift in Sources */,
+				6B8CE4E62545CA2F00CE76F3 /* ExchangeDescriptionTVCell.swift in Sources */,
+				0E2D85931FE09BC700BB954C /* NewsWebVC.swift in Sources */,
+				6B85C4B325344CA600068365 /* EnterNameVC.swift in Sources */,
+				6BDC64C9252CA7BF00A99CD2 /* PortfolioTitleView.swift in Sources */,
+				6B47F84B25862CFE0094EE67 /* AppStoreReceiptManager.swift in Sources */,
+				6B588F16257A6E3C0003355E /* GeneralMessageView.swift in Sources */,
+				0EAEF6401FE72CA8002F8F73 /* UserDataManager.swift in Sources */,
+				6B3575ED2535884E00B6FF40 /* ExchangeTVCell.swift in Sources */,
+				0EAEF6421FE82E2D002F8F73 /* CurrnetItem.swift in Sources */,
+				6B7DD80125065CD80098EA94 /* AlertTableViewCell.swift in Sources */,
+				6B85C4B525348EA900068365 /* URLRequest+Utils.swift in Sources */,
+				0E2D859B1FE2924600BB954C /* HistoryItem.swift in Sources */,
+				6BDC64C1252C442800A99CD2 /* AddCoinTVCell.swift in Sources */,
+				6BDC64C7252C47D400A99CD2 /* PortfolioTableSectionHeader.swift in Sources */,
+				0E15D860203068080095304A /* MyStringItemSource.swift in Sources */,
+				AC5EF79B21425C23005BA8DB /* EditProtfolioTableViewCell.swift in Sources */,
+				0E1B25571FDF3242001FB2F1 /* NewsVC.swift in Sources */,
+				0EAEF6441FE8307E002F8F73 /* CurrentAggItem.swift in Sources */,
+				0EAEF64C1FE8A737002F8F73 /* TradeCell.swift in Sources */,
+				6B85C4B125343BE400068365 /* UIView+Utils.swift in Sources */,
+				0EAEF6461FE8901F002F8F73 /* LiveMonitorVC.swift in Sources */,
+				6B3665B42549A66800F00BB5 /* EditPortfoliosTVC.swift in Sources */,
+				6BDC64C3252C445A00A99CD2 /* PortfolioCoinTVCell.swift in Sources */,
+				6BC32639252476FC008494CE /* PortfolioCVCell.swift in Sources */,
+				0E2D858B1FE0444900BB954C /* NewsItem.swift in Sources */,
+				0E2D85951FE0BE5B00BB954C /* CoinVC.swift in Sources */,
+				6BA7FDFF252496EB007C2B06 /* Portfolio.swift in Sources */,
+				AC41001F254DCEDB00A3F0BD /* IAPManager.swift in Sources */,
+				AC2558FE254DFE3B00A72814 /* IAP_VC.swift in Sources */,
+				AC6A764521392FC700B59893 /* AddNewHoldingVC.swift in Sources */,
+				0E2D85911FE0928000BB954C /* SmallNewsItemCell.swift in Sources */,
+				6B430258256523D700252445 /* PurchaseTVC.swift in Sources */,
+				AC6A7649213942F400B59893 /* ChooceCoinTVC.swift in Sources */,
+				AC3619412136FF0000917CAA /* PortfolioVC.swift in Sources */,
+				6B8632E0255BD03500B17628 /* StringProtocol+Utils.swift in Sources */,
+				0EAEF64A1FE895EB002F8F73 /* TradeItem.swift in Sources */,
+				0E1B255E1FDF6379001FB2F1 /* ZZCoinRate.swift in Sources */,
+				6B8632E2255C306C00B17628 /* Double+Utils.swift in Sources */,
+				6BBCADB02536DD8E00BE83A2 /* UIButton+Utils.swift in Sources */,
+				0E1B25591FDF36B4001FB2F1 /* OneCoinRateCell.swift in Sources */,
+				0E5D1C251FF85E79008AAEBF /* CryptoPanicNewsCell.swift in Sources */,
+				6B3F089D2573D81400F5A3DE /* String+Utils.swift in Sources */,
+				6B5B6C5E25791E690050C7B5 /* WebSocketManager.swift in Sources */,
+				6BE2DF81256A7FD6008233A6 /* Settings.swift in Sources */,
+				6B36CE922532E9FA00CC2907 /* UIImageView+Utils.swift in Sources */,
+				ACA4966A252E784200869463 /* AppStoreReviewManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B3F089E25752B1700F5A3DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B3F08A525752B1700F5A3DE /* ZZBitRateTests.swift in Sources */,
+				6B3F08AD25752BD600F5A3DE /* ValidateAppleReceiptTest.swift in Sources */,
+				6B71F628258B5F140037EEE5 /* FetchSettingsTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B3F08A825752B1700F5A3DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E1B253C1FDF2E83001FB2F1 /* ZZBitRate */;
+			targetProxy = 6B3F08A725752B1700F5A3DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0E1B25461FDF2E83001FB2F1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E1B25471FDF2E83001FB2F1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0E1B254B1FDF2E83001FB2F1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E1B254C1FDF2E83001FB2F1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0E1B254F1FDF2E83001FB2F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0E1B25501FDF2E83001FB2F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0E1B25521FDF2E83001FB2F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF1BDB8C3C65BE5B9E770ABD /* Pods-ZZBitRate.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZZBitRate/ZZBitRate.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = B9ZZD6JN8K;
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"$(inherited)",
+					"FBSDKCOCOAPODS=1",
+					"$(inherited)",
+					"GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1",
+					"$(inherited)",
+					"PB_FIELD_32BIT=1",
+					"PB_NO_PACKED_STRUCTS=1",
+					"PB_ENABLE_MALLOC=1",
+				);
+				INFOPLIST_FILE = ZZBitRate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.2.3;
+				PRODUCT_BUNDLE_IDENTIFIER = ZZ.ZZBitRate.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_REFLECTION_METADATA_LEVEL = all;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0E1B25531FDF2E83001FB2F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0AC92C22170DE846E86C29E /* Pods-ZZBitRate.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZZBitRate/ZZBitRate.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = B9ZZD6JN8K;
+				INFOPLIST_FILE = ZZBitRate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.2.3;
+				PRODUCT_BUNDLE_IDENTIFIER = ZZ.ZZBitRate.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_REFLECTION_METADATA_LEVEL = all;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6B3F08A925752B1800F5A3DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D460F0FA5EC92A22DC9DB3E /* Pods-ZZBitRateTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B9ZZD6JN8K;
+				INFOPLIST_FILE = ZZBitRateTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = hfhf.ZZBitRateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZZBitRate.app/ZZBitRate";
+			};
+			name = Debug;
+		};
+		6B3F08AA25752B1800F5A3DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD481D9559E009A46B21D338 /* Pods-ZZBitRateTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B9ZZD6JN8K;
+				INFOPLIST_FILE = ZZBitRateTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = hfhf.ZZBitRateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZZBitRate.app/ZZBitRate";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E1B25381FDF2E83001FB2F1 /* Build configuration list for PBXProject "ZZBitRate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E1B254F1FDF2E83001FB2F1 /* Debug */,
+				0E1B25501FDF2E83001FB2F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E1B25511FDF2E83001FB2F1 /* Build configuration list for PBXNativeTarget "ZZBitRate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E1B25521FDF2E83001FB2F1 /* Debug */,
+				0E1B25531FDF2E83001FB2F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B3F08AB25752B1800F5A3DE /* Build configuration list for PBXNativeTarget "ZZBitRateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B3F08A925752B1800F5A3DE /* Debug */,
+				6B3F08AA25752B1800F5A3DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0E1B25351FDF2E83001FB2F1 /* Project object */;
+}

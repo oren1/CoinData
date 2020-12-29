@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="kTn-88-0Bn">
+                                <rect key="frame" x="127.5" y="207" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="HJa-tS-ICj"/>
+                                    <constraint firstAttribute="height" constant="120" id="cX7-0b-vM4"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ioc-ET-xKI">
+                                <rect key="frame" x="0.0" y="335" width="375" height="282"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live Monitor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQU-Th-Xl9">
+                                        <rect key="frame" x="91" y="193" width="193.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="30"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real Time Rates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oh-u5-xfL">
+                                        <rect key="frame" x="115" y="231" width="145.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
+                                        <color key="textColor" red="0.033832229669999998" green="0.67372572419999999" blue="0.02247048728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0oh-u5-xfL" firstAttribute="top" secondItem="dQU-Th-Xl9" secondAttribute="bottom" constant="8" id="1Zq-M1-w7R"/>
+                                    <constraint firstItem="dQU-Th-Xl9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ioc-ET-xKI" secondAttribute="top" id="7Mx-z6-uWM"/>
+                                    <constraint firstAttribute="bottom" secondItem="0oh-u5-xfL" secondAttribute="bottom" constant="32" id="K2X-F7-byl"/>
+                                    <constraint firstItem="0oh-u5-xfL" firstAttribute="centerX" secondItem="ioc-ET-xKI" secondAttribute="centerX" id="Tgf-am-6CV"/>
+                                    <constraint firstItem="dQU-Th-Xl9" firstAttribute="centerX" secondItem="ioc-ET-xKI" secondAttribute="centerX" id="oCx-i4-vdy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kTn-88-0Bn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CHJ-FL-8Sl"/>
+                            <constraint firstItem="ioc-ET-xKI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FWg-ua-5tJ"/>
+                            <constraint firstItem="ioc-ET-xKI" firstAttribute="top" secondItem="kTn-88-0Bn" secondAttribute="bottom" constant="8" id="Gdo-od-72S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ioc-ET-xKI" secondAttribute="bottom" constant="50" id="VbF-LP-ToV"/>
+                            <constraint firstItem="kTn-88-0Bn" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.8" id="eq0-db-fn3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ioc-ET-xKI" secondAttribute="trailing" id="l08-T8-hWL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ioc-ET-xKI" secondAttribute="bottom" constant="50" id="nK5-Es-994"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AppLogo" width="60" height="60"/>
+    </resources>
+</document>
